@@ -7,7 +7,8 @@ import BorrowBook from './pages/borrow/BorrowBook';
 import BorrowSummary from './pages/borrow/BorrowSummary';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
-
+import NotFound from './pages/notFound/NotFound';
+import BookCards from './pages/book/BookCards';
 
 function App() {
 
@@ -22,9 +23,14 @@ function App() {
         <Route path="/edit-book/:id" element={<EditBook />} />
         <Route path="/borrow/:bookId" element={<BorrowBook />} />
         <Route path="/borrow-summary" element={<BorrowSummary />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/books" element={<BookCards />} />
+        <Route path="/" element={<BookCards />} />
       </Routes>
     </Router>
       <Footer />
+
+
     </>
   )
 }
