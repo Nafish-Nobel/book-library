@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import axios from '../../lib/axios';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
+
 
 function CreateBook() {
-
-
+  
   const navigate = useNavigate();
   const [form, setForm] = useState({
     title: '',
@@ -23,10 +24,10 @@ function CreateBook() {
     e.preventDefault();
     try {
       await axios.post('/books', form);
-      alert('✅ Book added!');
+      toast.success('Book Added!');
       navigate('/books');
     } catch (err) {
-      alert('❌ Failed to add book');
+      toast.error('Failed to add book');
       console.error(err);
     }
   };

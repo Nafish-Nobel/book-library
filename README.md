@@ -1,73 +1,104 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# 📚 Library Management System — Full Stack Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A complete full-stack Library Management System using **React + Vite + Tailwind CSS** for frontend and **Express + MongoDB** for backend. It includes Book CRUD, Borrow system, Aggregated summary, Validation, Toast notifications, and Dark Mode.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Links
 
-## Expanding the ESLint configuration
+- 🔗 **Frontend (Vercel)**: [https://library-frontend-kappa-five.vercel.app](https://your-frontend.vercel.app)
+- 🔗 **Backend (Vercel)**: [https://library-management-api-vert.vercel.app](https://library-management-api-vert.vercel.app)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- ✅ Book Create, Read, Update, Delete
+- ✅ Borrow book (with quantity and due date)
+- ✅ Borrow summary (aggregated by book)
+- ✅ Form validation using Zod
+- ✅ Toast notification using react-hot-toast
+- ✅ Dark mode toggle 🌗
+- ✅ Responsive UI with Tailwind & Shadcn UI
+- ✅ CORS configured for frontend-backend communication
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🧰 Tech Stack
+
+| Layer     | Tech                            |
+|-----------|---------------------------------|
+| Frontend  | React + Vite + TypeScript       |
+| Styling   | Tailwind CSS                    |
+| Form      | react-hook-form + zod           |
+| Toast     | react-hot-toast                 |
+| Backend   | Express.js + TypeScript         |
+| Database  | MongoDB Atlas                   |
+| API Calls | Axios                           |
+| Deploy    | Vercel (both frontend & backend)
+
+---
+
+## 🧪 API Endpoints
+
+| Method | Endpoint             | Description              |
+|--------|----------------------|--------------------------|
+| GET    | `/api/books`         | Get all books            |
+| GET    | `/api/books/:id`     | Get one book             |
+| POST   | `/api/books`         | Add new book             |
+| PUT    | `/api/books/:id`     | Update a book            |
+| DELETE | `/api/books/:id`     | Delete a book            |
+| POST   | `/api/borrow`        | Borrow a book            |
+| GET    | `/api/borrow`        | Aggregated borrow report |
+
+---
+
+## ⚙️ Frontend Setup
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Create `.env` file:
 ```
-=======
-# book-library
->>>>>>> 3f8b4a839a5e88b7956f274971c7c94960ee49b6
+VITE_API_BASE_URL=https://library-management-api-vert.vercel.app/api
+```
+
+---
+
+## ⚙️ Backend Setup
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+Create `.env` file:
+```
+PORT=5000
+MONGO_URI=your_mongodb_uri
+```
+
+---
+
+## 🧪 Postman
+
+- Postman collection provided
+- Contains all major endpoints
+
+---
+
+## 🙋 Author
+
+**👤 Nur Nafish Ahmed Nobel**  
+📧 Email: [nafish.nobel.me@gmail.com](mailto:nafish.nobel.me@gmail.com)  
+🔗 GitHub: [@Nafish-Nobel](https://github.com/Nafish-Nobel)  
+🏫 Daffodil International University
+
+---
+
+## 📄 License
+
+This project is for educational/demo purposes only.

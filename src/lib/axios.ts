@@ -8,5 +8,3 @@ const axiosInstance = axios.create({
 });
 
 export default axiosInstance;
-// This file sets up a custom Axios instance with a base URL and default headers.
-// It can be imported and used throughout the application to make API requests.

@@ -19,7 +19,9 @@ function BorrowSummary() {
   }, []);
 
   return (
-    <div className="p-6">
+
+    <div className="p-6 bg-white dark:bg-gray-800 text-black dark:text-black-200"> 
+          <div className="p-6">
       <h1 className="text-2xl font-bold mb-4 bg-green-100 text-center p-2">📊 Borrow Summary</h1>
 
       {loading ? (
@@ -45,6 +47,9 @@ function BorrowSummary() {
         </table>
       )}
     </div>
+
+     </div>
+
   );
 }
 

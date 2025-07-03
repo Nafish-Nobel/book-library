@@ -4,7 +4,6 @@
 .input {
   @apply w-full border px-3 py-2 rounded shadow-sm;
 }
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
