@@ -52,9 +52,8 @@ function Books() {
   );
 
   return (
-    
-    <div className="p-6 bg-white dark:bg-gray-800 text-black dark:text-black-200">
-      <div className="p-6 text-2xl max-w-7xl mx-auto font-italic text-center">
+    <div className="bg-white dark:bg-gray-800 text-black dark:text-black-200">
+      <div className="text-2xl max-w-7xl mx-auto font-italic text-center">
         <h1 className="p-2 text-4xl text-gray-600 bg-green-200 rounded text-center font-bold mb-4">🔖All Books</h1>
         
         {/* Search input */}
@@ -71,7 +70,7 @@ function Books() {
         {loading ? (
           <p>Loading books...</p>
         ) : (
-          <div className="overflow-x-auto rounded-lg shadow-sm">
+          <div className="p-2 overflow-x-auto rounded-lg shadow-sm">
             <table className="min-w-full table-auto border border-gray-300 text-xs sm:text-sm md:text-base">
               <thead className="bg-orange-100 text-center">
                 <tr>

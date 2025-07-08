@@ -17,7 +17,7 @@ function Navbar() {
   }, [dark]);
 
   return (
-    <nav className="bg-blue-800 text-white px-6 py-3 mb-6 shadow-md">
+    <nav className="bg-blue-800 text-white px-6 py-4 mb-6 shadow-md">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         <h1 className="text-xl font-semibold bg-blue-600 p-2 rounded">Books Library System</h1>
         <div className="space-x-4">
