@@ -6,8 +6,13 @@ import toast, { Toaster } from 'react-hot-toast';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
-    <Toaster position="top-right" />
+    <div className='@container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 min-h-screen flex flex-col justify-between'>
+
+      <Toaster position="top-right" reverseOrder={false} />
+      <App />
+
+    </div>
+
   </StrictMode>,
 )
 toast.success('successfully loaded app');
